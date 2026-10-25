@@ -98,15 +98,18 @@ nav .knapp{min-height:42px;padding:0 18px;font-size:14px}
 .val .t em{font-style:normal;font-size:15px;color:#ffffffb3;margin-left:8px}
 .val small{grid-column:2;font-size:14px;color:#ffffffb3;display:flex;align-items:center;gap:8px}
 .val small i{width:16px;height:16px;border-radius:50%;background:var(--lime);flex:none}
+.val .vrad{display:grid;gap:4px;padding:16px 18px;border-radius:14px;background:#ffffff1a}
+.val .vrad small{grid-column:auto}
 .kop{display:flex;gap:12px;align-items:center;margin-top:26px;max-width:440px}
 .kop .knapp{flex:1;min-height:54px;font-size:17px;background:var(--lime);color:var(--black)}
 .kop .knapp:hover{background:#d6f784}
 .hjarta{width:54px;height:54px;border-radius:50%;border:0;background:#ffffff14;box-shadow:inset 0 0 0 1.5px #ffffff60;display:grid;place-items:center;cursor:pointer;color:#fff}
 .hjarta[aria-pressed=true]{background:#fff;color:var(--korall)}
 .hjarta svg{width:24px;height:24px}
-.egenskap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 36px;margin-top:44px;max-width:700px;font-size:15px;color:#ffffffe6;list-style:none;padding:0}
+.egenskap{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 32px;margin-top:44px;max-width:560px;font-size:15px;color:#ffffffe6;list-style:none;padding:0}
 .egenskap li{display:flex;gap:12px;align-items:center}
 .egenskap svg{width:24px;height:24px;flex:none;stroke:#fff;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+@media (min-width:861px) and (max-width:1240px){.egenskap{grid-template-columns:1fr;max-width:calc(44vw - 56px)}}
 .marken{position:absolute;right:max(16px,calc((100% - 1160px)/2));bottom:40px;z-index:2;display:flex;gap:10px;align-items:flex-end}
 .marke{width:64px;text-align:center;font:700 10px/1.2 var(--brod);color:#fff}
 .marke span{display:grid;place-items:center;width:64px;height:64px;border-radius:10px;margin-bottom:6px;font:800 13px/1.05 var(--rubrik)}
@@ -444,13 +447,13 @@ footer.m2 .inner{display:flex;gap:24px;justify-content:space-between;flex-wrap:w
 .hscen .mobil img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:34px}
 .hscen .stor{position:absolute;right:2%;bottom:6%;width:52%;height:72%}
 .hscen .stor::after{content:"";position:absolute;left:18%;right:18%;bottom:-2%;height:6%;border-radius:50%;background:#00000080;filter:blur(12px);z-index:-1}
-.hscen .bubbla{position:absolute;right:40%;top:16%;padding:10px 16px;border-radius:18px 18px 18px 4px;background:#ffffff14;backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1px #ffffff26;font:700 15px var(--brod);color:#fff}
+.hscen .bubbla{position:absolute;right:9%;bottom:52%;padding:10px 16px;border-radius:18px 18px 18px 4px;background:#ffffff14;backdrop-filter:blur(8px);box-shadow:inset 0 0 0 1px #ffffff26;font:700 15px var(--brod);color:#fff}
 .hscen .bubbla b{color:var(--lime)}
 @media (max-width:860px){
   .hscen{position:relative;width:100%;height:118vw;max-height:620px;margin-top:70px}
   .hscen .mobil{left:6%;width:46%}
   .hscen .stor{width:56%;height:70%;right:0}
-  .hscen .bubbla{right:4%;left:auto;top:4%;font-size:13px}
+  .hscen .bubbla{right:3%;left:auto;top:22%;bottom:auto;font-size:13px}
   .bhero .inner{margin-top:0}
 }
 
@@ -520,10 +523,7 @@ footer.m2 .inner{display:flex;gap:24px;justify-content:space-between;flex-wrap:w
     <h1><span class="vh">Fitchi</span><svg class="herologo" viewBox="0 0 262 142" aria-hidden="true"><text x="0" y="96" font-family="Bricolage Grotesque, sans-serif" font-weight="800" font-size="104" letter-spacing="-5" fill="#ffffff">fitchi</text><path d="M4 120 H104 L116 102 L130 132 L142 108 L152 120 H214" stroke-width="7" stroke="#c8f169" fill="none" stroke-linejoin="round" stroke-linecap="round"/><g transform="translate(212 92) scale(.24)"><path d="M100 186 L20 92 L48 30 H84 L100 58 L116 30 H152 L180 92Z" fill="#c8f169" stroke="#c8f169" stroke-width="7" stroke-linejoin="round"/><path d="M20 92 L48 30 H84 L100 58 L66 92Z" fill="#e6ff9e" opacity=".7"/></g></svg></h1>
     <p class="under">Spela dig friskare</p>
     <p class="plattform">Kommer till <b>iPhone</b><b>Android</b></p>
-    <fieldset class="val"><legend>Välj hur du vill spela</legend>
-      <label><input type="radio" name="plan" value="gratis" checked><span class="t">Gratis</span><small><i></i>Din fitchi, dagens uppdrag och förmåner</small></label>
-      <label><input type="radio" name="plan" value="plus"><span class="t">Fitchi Plus <em>pris kommer</em></span><small><i></i>Djupare insikter, spel med vänner och fler fitchis</small></label>
-    </fieldset>
+    <div class="val"><div class="vrad"><span class="t">Gratis</span><small><i></i>Din fitchi, dagens uppdrag och förmåner</small></div></div>
     <div class="kop"><a class="knapp" href="#ko">Få tidig tillgång</a><button class="hjarta" type="button" aria-pressed="false" aria-label="Spara Fitchi"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.3 4.5 6.8 4.5c2 0 3.4 1.1 4.2 2.4h2c.8-1.3 2.2-2.4 4.2-2.4 3.5 0 5.4 3.5 4.1 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button></div>
     <ul class="egenskap">
       <li><svg viewBox="0 0 24 24"><path d="M3 12h4l2-5 4 10 2-5h6"/></svg>Hämtar steg, sömn och puls av sig själv</li>
@@ -746,6 +746,20 @@ function navLage(){ const over = hero.getBoundingClientRect().bottom > 70; nav.c
 addEventListener('scroll', navLage, {passive:true}); navLage();
 document.querySelector('.hjarta').addEventListener('click', e => { const b = e.currentTarget; b.setAttribute('aria-pressed', b.getAttribute('aria-pressed') !== 'true'); });
 document.querySelectorAll('.djur[data-a]').forEach(d => d.innerHTML = levande(d.dataset.a, d.dataset.p, LA + ' aria-hidden="true"'));
+// pratbubblan i heron placeras precis ovanför fitchins öron
+(function(){
+  const sc = document.querySelector('.hscen'), bu = sc && sc.querySelector('.bubbla'), im = sc && sc.querySelector('.stor img');
+  if (!bu || !im) return;
+  function placera(){
+    if (innerWidth <= 860 || !im.naturalWidth) { bu.style.top = ''; bu.style.bottom = ''; return; }
+    const r = im.getBoundingClientRect(), s = sc.getBoundingClientRect();
+    const k = Math.min(r.width / im.naturalWidth, r.height / im.naturalHeight);
+    const topp = r.bottom - im.naturalHeight * k - s.top;
+    bu.style.bottom = 'auto'; bu.style.top = Math.max(8, topp - bu.offsetHeight - 6) + 'px';
+  }
+  im.complete ? placera() : im.addEventListener('load', placera);
+  addEventListener('resize', placera);
+})();
 // spegeln: en vecka med Bruno
 const VECKA = [
   ['trott','Måndag','Fem timmars sömn',['5 h sömn','Vilopuls +8','Sen skärmtid'],'+10 XP',40],
