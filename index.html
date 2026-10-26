@@ -669,23 +669,6 @@ footer.m2 .inner{display:flex;gap:24px;justify-content:space-between;flex-wrap:w
   <div class="ruta regel2"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg><div><b>Inga genvägar.</b><span>Mynt går inte att köpa, och ingen kan betala sig till en starkare fitchi. Inga lådor med slumpvinster, inga genvägar.</span></div></div>
 </div></section>
 
-<section class="m alt"><div class="inner">
-  <div class="rubrikrad">
-    <div><p class="ogon">För alla</p><h2>Byggt för ditt liv.</h2></div>
-    <p class="ingress">Oavsett om du tränar varje dag eller inte rört dig på ett år. Välj en situation och se hur spelet anpassar sig.</p>
-  </div>
-  <div class="liv2" role="group" aria-label="Välj en livssituation">
-    <button data-liv="nyborjare" aria-pressed="true">Har inte tränat på länge</button>
-    <button data-liv="stress">Stressig period</button>
-    <button data-liv="van">Tränar fem dagar i veckan</button>
-    <button data-liv="glp1">Går på GLP-1</button>
-    <button data-liv="sjuk">Sjukskriven</button>
-    <button data-liv="sma">Småbarnsförälder</button>
-  </div>
-  <div class="ruta svar2" aria-live="polite"><div class="djur" id="livDjur"></div><div><span class="tag">Dina uppdrag</span><b id="livRubrik"></b><p id="livText"></p><ul id="livLista"></ul></div></div>
-  <p class="trygg2"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/></svg>Det du berättar styr bara dina uppdrag. Det delas aldrig, används aldrig till reklam, och ingen i Fitchi jagar vikt.</p>
-</div></section>
-
 <section class="m" id="fitchis"><div class="inner">
   <div class="rubrikrad">
     <div><p class="ogon">Möt fitchis</p><h2>Vem blir din?</h2></div>
@@ -842,7 +825,7 @@ function livVisa(k){
   document.querySelectorAll('.liv2 button').forEach(b => b.setAttribute('aria-pressed', b.dataset.liv === k));
 }
 document.querySelectorAll('.liv2 button').forEach(b => b.addEventListener('click', () => livVisa(b.dataset.liv)));
-livVisa('nyborjare');
+if(document.getElementById('livDjur')) livVisa('nyborjare');
 document.getElementById('koForm').addEventListener('submit', e => { e.preventDefault();
   document.getElementById('klart').textContent = 'Klart! Vi hör av oss när Fitchi släpps. (Testversion: adressen sparas inte.)'; e.target.reset(); });
 </script>
