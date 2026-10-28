@@ -39,12 +39,12 @@ footer{border-top:1px solid var(--linje);padding:24px 16px;text-align:center;fon
 <main>
 <h1>Integritetspolicy</h1>
 <p class="ingress">Fitchi är byggt så att det mesta stannar i din telefon. Här står vad som ändå lämnar den, varför och hur du bestämmer över det.</p>
-<p class="datum">Gäller från 2026-10-24</p>
+<p class="datum">Gäller från 2026-10-29</p>
 
 <div class="kort">
 <p><b>Kort sagt</b></p>
 <ul>
-<li>Din hälsodata (steg, sömn, puls och träningspass) läses i telefonen och skickas aldrig till oss.</li>
+<li>Din hälsodata (steg, sömn, puls och träningspass) läses i telefonen och skickas inte till oss – utom om du själv slår på <b>Säkerhetskopia</b>.</li>
 <li>Du behöver inget konto, ingen e-post och inget telefonnummer.</li>
 <li>Använder du Vänner delas din fitchis namn, figur, humör och nivå med de vänner du själv lägger till.</li>
 <li>Vi visar ingen reklam, spårar dig inte och säljer aldrig uppgifter.</li>
@@ -55,7 +55,7 @@ footer{border-top:1px solid var(--linje);padding:24px 16px;text-align:center;fon
 <p>Personuppgiftsansvarig är Flipp Marketing AB (org.nr 559426-3484), Sverige. Kontakta oss på <a href="mailto:hej@fitchi.app">hej@fitchi.app</a> om du har frågor eller vill använda dina rättigheter.</p>
 
 <h2>Det som bara sparas i din telefon</h2>
-<p>Det här sparas i appen på din telefon (eller i webbläsaren om du använder webbappen) och skickas inte till oss:</p>
+<p>Det här sparas i appen på din telefon (eller i webbläsaren om du använder webbappen) och skickas inte till oss, om du inte själv slår på Säkerhetskopia (se nedan):</p>
 <ul>
 <li>Dina svar i matchningen och den fitchi du fick.</li>
 <li>Spelet: nivå, mynt, nycklar, prylar, uppdrag och din dagbok.</li>
@@ -66,7 +66,7 @@ footer{border-top:1px solid var(--linje);padding:24px 16px;text-align:center;fon
 
 <h2>Hälsodata och Health Connect</h2>
 <p>Android-appen kan, om du tillåter det, läsa <b>steg, sömn, puls, vilopuls och träningspass</b> från Health Connect (till exempel från Samsung Health eller din klocka). Fitchi skriver ingen data till Health Connect.</p>
-<p>Uppgifterna används bara för att visa dem för dig och för att räkna ut hur din fitchi mår: energi, lugn och styrka, vilka uppdrag som är klara och veckans nycklar. Själva hälsodatan sparas i telefonen och skickas aldrig till oss eller någon annan.</p>
+<p>Uppgifterna används bara för att visa dem för dig och för att räkna ut hur din fitchi mår: energi, lugn och styrka, vilka uppdrag som är klara och veckans nycklar. Själva hälsodatan sparas i telefonen och skickas aldrig till någon annan. Den lämnar bara telefonen om du själv slår på Säkerhetskopia, och då bara för att du ska kunna få tillbaka den.</p>
 <p>Fitchis användning av information från Health Connect följer Health Connects <a href="https://support.google.com/googleplay/android-developer/answer/12991134">policy för behörigheter</a>, inklusive kraven på begränsad användning. Hälsodata används aldrig för reklam, säljs aldrig och används inte för att bedöma kreditvärdighet eller försäkring. Du kan när som helst ta bort behörigheten i Health Connect.</p>
 <p>Fitchi är en app för vardagsvanor, inte en medicinsk tjänst, och ställer inga diagnoser.</p>
 
@@ -82,6 +82,11 @@ footer{border-top:1px solid var(--linje);padding:24px 16px;text-align:center;fon
 <p>Bara du och de vänner du själv har lagt till kan se uppgifterna. Den rättsliga grunden är avtal: du använder en funktion du själv har valt. Uppgifterna sparas så länge du använder Vänner. Trycker du <b>Börja om från början</b> raderas din profil, dina vänskaper och din pepp från servern.</p>
 <p>Servern drivs av Supabase och står inom EU (Irland). Supabase behandlar uppgifterna för vår räkning enligt ett personuppgiftsbiträdesavtal.</p>
 
+<h2>Säkerhetskopia</h2>
+<p>Säkerhetskopia är frivillig och avstängd från början. Slår du på den under Din resa sparas en packad kopia av allt som annars bara finns i telefonen på vår server: spelet, dina svar i matchningen, mat och träning du loggat, hur du sagt att du mår och den hälsodata appen sparat (steg, sömn och puls). Syftet är bara att du ska kunna få tillbaka din fitchi om du byter eller tappar telefonen.</p>
+<p>Kopian kopplas till ett anonymt konto utan namn, e-post eller telefonnummer. Du får en återställningskod som bara du har; vi sparar bara en hash av koden och kan inte läsa koden själv. Kopian används inte till något annat, delas inte med någon och visas inte för dina vänner.</p>
+<p>Eftersom kopian kan innehålla hälsouppgifter är den rättsliga grunden ditt uttryckliga samtycke, som du ger när du slår på funktionen. Du kan när som helst ta tillbaka samtycket genom att stänga av Säkerhetskopia – då raderas kopian från servern direkt. Den raderas också om du trycker <b>Börja om från början</b>. Kopian lagras krypterad hos Supabase inom EU (Irland), samma server som för Vänner.</p>
+
 <h2>Scanna mat</h2>
 <p>När du scannar en streckkod skickas bara streckkoden till <a href="https://world.openfoodfacts.org">Open Food Facts</a> för att hämta näringsvärden. Kameran används bara medan du scannar, och inga bilder sparas. Data från Open Food Facts används under licensen ODbL.</p>
 
@@ -92,7 +97,7 @@ footer{border-top:1px solid var(--linje);padding:24px 16px;text-align:center;fon
 <p>Fitchi riktar sig inte till barn under 13 år.</p>
 
 <h2>Dina rättigheter</h2>
-<p>Du har rätt att få veta vilka uppgifter vi har om dig, att få dem rättade eller raderade och att invända mot behandlingen. Det mesta finns bara i din telefon och styrs av dig. För Vänner kan du radera allt själv i appen, eller mejla oss med din vänkod. Du kan också klaga hos Integritetsskyddsmyndigheten (<a href="https://www.imy.se">imy.se</a>).</p>
+<p>Du har rätt att få veta vilka uppgifter vi har om dig, att få dem rättade eller raderade och att invända mot behandlingen. Det mesta finns bara i din telefon och styrs av dig. För Vänner och Säkerhetskopia kan du radera allt själv i appen, eller mejla oss med din vänkod. Du kan också klaga hos Integritetsskyddsmyndigheten (<a href="https://www.imy.se">imy.se</a>).</p>
 
 <h2>Ändringar</h2>
 <p>Ändrar vi policyn uppdaterar vi den här sidan och datumet högst upp. Större ändringar berättar vi om i appen.</p>
